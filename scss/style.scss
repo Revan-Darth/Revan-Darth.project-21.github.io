@@ -1,0 +1,210 @@
+@use 'sass:math';
+@charset 'utf-8';
+@import 'normalize';
+@import 'auto-em-rem-perssent';
+@import 'calc-adaptive';
+	$maxWidth: 1440;
+	$maxWidthContainer: 1172;
+	$offsetContainer: 16px; 
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Black.woff2') format('woff2'),
+         url('../fonts/Inter-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2'),
+         url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2'),
+         url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+         url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+         url('../fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+         url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Medium.woff2') format('woff2'),
+         url('fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.woff2') format('woff2'),
+         url('fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::after,
+*::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+	width: 5px;
+	height: 5px;
+	border-radius: 10px;
+	background-color: #656566;
+}
+::-webkit-scrollbar-thumb{
+	background-color: #4077F3;
+	box-shadow: 0px 4px 3px rgba(36, 75, 164, 0.2);
+	border-radius: 10px;
+}
+
+body{
+	font-family: 'Inter';
+	font-weight: 400;
+	overflow-x: hidden;
+	background-color: #0E1014;
+	&.lock{
+		overflow: hidden;
+	}
+}
+
+.wrapper{
+	overflow-x: hidden;
+}
+
+[class*="__container"]{
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 $offsetContainer;
+}
+
+ul li{
+	list-style: none;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+
+#site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+#site-header.hide {
+  top: -100px;
+}
+
+
+
+.header {
+	&__container {}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 16px 38px;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.18;
+		color: #E4E5EA;
+	}
+	&__logo {
+		max-width: 140px;
+		margin-right: 8px;
+	}
+	&__menu {
+		display: flex;
+	}
+	&__menu-item {
+		&:not(:last-child){
+			margin-right: 1.2vw;
+		}
+		transition-duration: .3s;
+		&:hover{
+			color: #fff;
+		}
+	}
+	&__menu-link {}
+	&__contacts{
+		display: flex;
+		align-items: center;
+	}
+	&__phone-number {
+		margin-right: 1.6vw;
+		transition-duration: .3s;
+		&:hover{
+			color: #fff;
+		}
+	}
+	&__messangers {
+		display: flex;
+		align-items: center;
+	}
+	path{
+		transition-duration: .3s;
+	}
+	&__messangers-item {
+		&:not(:last-child){
+			margin-right: 1.6vw;
+		}
+		&:hover path{
+			fill: #4077F3;
+		}
+	}
+	&__messangers-telegram {}
+	&__messangers-viber {}
+	&__messangers-whatsapp {}
+}
+.logo {
+}
+.phone-number {
+}
+
+@import 'media';
