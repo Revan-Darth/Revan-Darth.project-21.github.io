@@ -129,6 +129,20 @@ img{
 	vertical-align: top;
 }
 
+.visually-hidden{
+	border: 0;
+	clip: rect(0 0 0 0);
+	-webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	white-space: nowrap;
+}
+
 #site-header {
   position: fixed;
   top: 0;
@@ -149,7 +163,7 @@ img{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 16px 38px;
+		padding: 16px 0px;
 		font-weight: 500;
 		font-size: 1rem;
 		line-height: 1.18;
@@ -158,6 +172,10 @@ img{
 	&__logo {
 		max-width: 140px;
 		margin-right: 8px;
+	}
+	&__nav{}
+	&__mobile-nav{
+		display: none;
 	}
 	&__menu {
 		display: flex;
@@ -187,15 +205,9 @@ img{
 		display: flex;
 		align-items: center;
 	}
-	path{
-		transition-duration: .3s;
-	}
 	&__messangers-item {
 		&:not(:last-child){
-			margin-right: 1.6vw;
-		}
-		&:hover path{
-			fill: #4077F3;
+			margin-right: 1.3vw;
 		}
 	}
 	&__messangers-telegram {}
@@ -205,6 +217,34 @@ img{
 .logo {
 }
 .phone-number {
+}
+
+
+
+
+
+
+body{
+	&._touch{}
+	&._pc{
+		.header{
+			&__menu-item {
+				transition-duration: .3s;
+				&:hover{
+					color: #fff;
+				}
+			}
+			path{
+				transition-duration: .3s;
+			}
+			&__messangers-item {
+				&:hover path{
+					fill: #4077F3;
+				}
+			}
+		}
+	}
+
 }
 
 @import 'media';
