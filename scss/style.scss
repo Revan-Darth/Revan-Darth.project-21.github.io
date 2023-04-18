@@ -103,6 +103,7 @@ body{
 	font-weight: 400;
 	overflow-x: hidden;
 	background-color: #0E1014;
+	color: #E4E5EA;
 	&.lock{
 		overflow: hidden;
 	}
@@ -164,10 +165,9 @@ img{
 		justify-content: space-between;
 		align-items: center;
 		padding: 16px 0px;
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 1rem;
 		line-height: 1.18;
-		color: #E4E5EA;
 	}
 	&__logo {
 		max-width: 140px;
@@ -219,7 +219,290 @@ img{
 .phone-number {
 }
 
-
+.purple-ball{
+	--size: 60px;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%);
+	box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+	filter: blur(5px);
+	backdrop-filter: blur(2px);
+	pointer-events: none;
+}
+.red-ball{
+	--size: 83px;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%);
+	box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+	backdrop-filter: blur(2px);
+	pointer-events: none;
+}
+.yellow-light{
+	--size: 280px;
+	width: var(--size);
+	height: var(--size);
+	background-color: #FCB045;
+	opacity: 0.4;
+	filter: blur(196px);
+	pointer-events: none;
+}
+.purple-light{
+	--size: 260px;
+	width: var(--size);
+	height: var(--size);
+	background-color: #833AB4;
+	opacity: 0.5;
+	filter: blur(196px);
+	pointer-events: none;
+}
+.red-light{
+	--size: 310px;
+	width: var(--size);
+	height: var(--size);
+	background-color: #961A1A;
+	opacity: 0.5;
+	filter: blur(196px);
+	pointer-events: none;
+}
+.lines-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 5;
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	.line-gradient--left{
+		left: 14px;
+	}
+	.line-gradient--right{
+		right: 14px;
+		left: auto;
+	}
+	.line-gradient--indentleft{
+		right: 13%;
+		left: auto;
+	}
+	.mouse-icon{
+		pointer-events: none;
+		position: absolute;
+		top: 82%;
+		left: 6px;
+	}
+}
+.line-gradient{
+	position: absolute;
+	top: 0;
+	left: 0%;
+	width: 1px;
+	height: 100%;
+	opacity: 0.1;
+	background: linear-gradient(122deg, #FCB045 100%,  #833AB4 100%), #E4E5EA;
+}
+.line-center{
+	left: 47%;
+}
+.yellow-ball-center{
+	--size: 46px;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background: radial-gradient(84.78% 84.78% at 0% 11.96%, rgba(255, 233, 203, 0.568) 0%, rgba(184, 131, 18, 0.448) 100%);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -4px 4px 7px rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(2.5px);
+	transform: matrix(0, 1, 1, 0, 0, 0);
+	position: relative;
+	&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../images/icons/small-dots.png')cover;
+	}
+}
+#main{
+	padding-top: 56px;
+	position: relative;
+}
+.promo {
+	padding-top: 10vh;
+	position: relative;
+	min-height: 90vh;
+	&::before{
+		content: '';
+		position: absolute;
+		top: -56px;
+		left: 0;
+		z-index: 3;
+		width: 47%;
+		height: calc(100% + 56px);
+		background: radial-gradient(238.53% 189.02% at 3.2% 3.49%, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%);
+		backdrop-filter: blur(7.5px);
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+	&__container {}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		font-size: rem(18);
+		line-height: 1.22;
+		position: relative;
+		z-index: 50;
+	}
+	&__maintext {
+		flex: 0 1 362px;
+	}
+	&__title {
+		font-size: rem(48);
+		line-height: 1.2;
+		margin-bottom: 3vh;
+		font-weight: 400;
+		span{
+			font-weight: 900;
+			background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+	}
+	&__maintext-descr {
+		max-width: 275px;
+	}
+	&__descr {
+		flex: 0 1 300px;
+		text-align: right;
+	}
+	&__descr-text {
+		font-weight: 500;
+		margin-bottom: 4vh;
+		span{
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+	&__descr-list {
+		margin-bottom: 5vh;
+		display: grid;
+		grid-template-columns: repeat(2, 142px);
+		grid-gap: 30px 14px;
+		dt{
+			font-weight: 500;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			margin-bottom: 3px;
+		}
+		dd{
+			font-size: 1rem;
+			line-height: 1.25;
+		}
+	}
+	&__descr-wrap {}
+	&__btn {
+		display: inline-block;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.18;
+		text-align: center;
+		color: #E4E5EA;
+		background-color: #4077F3;
+		padding: 21px 35px;
+	}
+	&__btn-mobile{
+		display: none;
+	}
+	&__bg-circle{
+		max-width: 548px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+		pointer-events: none;
+	}
+	&__bg-dots{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: 386px;
+		width: 100%;
+		max-height: 520px;
+		height: 100%;
+		opacity: 0.3;
+		&--gradfirst{}
+		&--gradsecond{}
+		&--dots{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+			pointer-events: none;
+		}
+		&--dots{}
+	}
+	.purple-ball{
+		position: absolute;
+		top: -8%;
+		left: 60%;
+		z-index: 5;
+	}
+	.red-ball{
+		&--big{
+			position: absolute;
+			top: 2%;
+			left: 35%;
+		}
+		&--small{
+			--size: 28px;
+			position: absolute;
+			top: 50%;
+			left: 60%;
+			filter: blur(2.5px);
+			background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%) 
+		}
+	}
+	.yellow-light{
+		position: absolute;
+		bottom: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.purple-light{
+		position: absolute;
+		top: -25%;
+		left: 45%;
+	}
+	.red-light{
+		position: absolute;
+		left: -10%;
+	}
+	.yellow-ball-center{
+		position: absolute;
+		bottom: 10%;
+		left: 47%;
+		transform: translateX(-47%);
+		z-index: 3;
+	}
+}
+._text-decor {
+	background: linear-gradient(122deg, #FD1D1D 5%,  #FCB045 70.36%), #E4E5EA;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
 
 
 

@@ -210,12 +210,6 @@
 	const daAdapt = new DynamicAdapt("max");
 	daAdapt.init();
 
-
-
-
-
-
-
 // Add & Remove class for resize
 	if (window.matchMedia("(max-width: 800px)").matches) {
 		document.querySelector('.header__phone-number').classList.add('visually-hidden');
