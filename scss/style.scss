@@ -292,7 +292,7 @@ img{
 	.mouse-icon{
 		pointer-events: none;
 		position: absolute;
-		top: 82%;
+		top: 82vh;
 		left: 6px;
 	}
 }
@@ -302,7 +302,7 @@ img{
 	left: 0%;
 	width: 1px;
 	height: 100%;
-	opacity: 0.1;
+	opacity: 0.05;
 	background: linear-gradient(122deg, #FCB045 100%,  #833AB4 100%), #E4E5EA;
 }
 .line-center{
