@@ -338,6 +338,7 @@ img{
 	font-size: rem(48);
 	line-height: 1.2;
 	font-weight: 400;
+	margin-bottom: 5vh;
 }
 .promo {
 	padding-top: 10vh;
@@ -501,6 +502,13 @@ img{
 		z-index: 3;
 	}
 }
+.subtitle{
+	font-weight: 400;
+	font-size: rem(24);
+	line-height: 1.2;
+	margin-bottom: 3.8vh;
+	max-width: 450px;
+}
 ._text-decor {
 	background: linear-gradient(122deg, #FD1D1D 5%,  #FCB045 70.36%), #E4E5EA;
 	-webkit-background-clip: text;
@@ -519,20 +527,13 @@ img{
 	position: relative;
 	padding: 10vh 0;
 	&__container {}
-	&__title {
-		margin-bottom: 5vh;
-	}
+	&__title {}
 	&__inner {
 		display: flex;
 		align-items: flex-end;
 	}
 	&__video {}
 	&__video-descr {
-		font-weight: 400;
-		max-width: 450px;
-		font-size: rem(24);
-		line-height: 1.2;
-		margin-bottom: 3.8vh;
 	}
 	&__video-container {
 		display: flex;
@@ -585,7 +586,86 @@ img{
 	}
 }
 
+.about-us {
+	position: relative;
+	padding: 10vh 0;
+	&__container {}
+	&__title {}
+	&__descr {
+		max-width: 390px;
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		row-gap: 12px;
+		max-width: 1000px;
+		width: 100%;
+	}
+	&__list-item {
+		max-width: 130px;
 
+		dt{
+			font-weight: 700;
+			font-size: rem(48);
+			line-height: 1.2;
+
+			background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+
+			margin-bottom: 6px;
+		}
+
+		dd{
+			font-size: rem(18);
+			line-height: 1.22;
+			font-weight: 400;
+		}
+
+		&--programming{
+			max-width: 230px;
+		}
+
+		&:not(:last-child){
+			margin-right: 12px;
+		}
+	}
+
+	.red-light{
+		position: absolute;
+		top: 25%;
+		left: -10%;
+		--size: 364px;
+	}
+}
+
+
+.solving {
+	&__container {}
+	&__title {}
+	&__header {}
+	&__header-subtitle {}
+	&__header-descr {}
+	&__inner {}
+	&__list-wrapper {}
+	&__list-title {}
+	&__list {}
+	&__list-item {}
+	&__audit {}
+	&__audit-subtitle {}
+	&__audit-item {}
+	&__audit-icon {}
+	&__audit-title {}
+	&__audit-descr {}
+	
+	.yellow-ball-center {
+	}
+	.yellow-light {
+	}
+}
 
 
 body{
