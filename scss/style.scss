@@ -62,8 +62,8 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('fonts/Montserrat-Medium.woff2') format('woff2'),
-         url('fonts/Montserrat-Medium.woff') format('woff');
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+         url('../fonts/Montserrat-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -71,8 +71,8 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('fonts/Montserrat-Regular.woff2') format('woff2'),
-         url('fonts/Montserrat-Regular.woff') format('woff');
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+         url('../fonts/Montserrat-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -104,6 +104,7 @@ body{
 	overflow-x: hidden;
 	background-color: #0E1014;
 	color: #E4E5EA;
+	position: relative;
 	&.lock{
 		overflow: hidden;
 	}
@@ -333,6 +334,7 @@ img{
 #main{
 	padding-top: 56px;
 	position: relative;
+	z-index: 15;
 }
 .title{
 	font-size: rem(48);
@@ -523,6 +525,12 @@ img{
 	background-clip: text;
 	text-fill-color: transparent;
 }
+._title-content{
+	display: block;
+	font-weight: 400;
+	font-size: rem(18);
+	line-height: 1.2;
+}
 .dating {
 	position: relative;
 	padding: 10vh 0;
@@ -644,26 +652,112 @@ img{
 
 
 .solving {
+	position: relative;
+
+	padding: 10vh 0;
+
 	&__container {}
-	&__title {}
-	&__header {}
-	&__header-subtitle {}
-	&__header-descr {}
-	&__inner {}
+	&__title {
+	}
+	&__header {
+		display: flex;
+	}
+	&__header-subtitle {
+		margin-right: 30px;
+		gap: 30px;
+	}
+	&__header-descr {
+		flex-basis: 320px;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		& > *{
+			margin-right: 8px;
+		}
+	}
 	&__list-wrapper {}
-	&__list-title {}
-	&__list {}
-	&__list-item {}
-	&__audit {}
-	&__audit-subtitle {}
-	&__audit-item {}
-	&__audit-icon {}
-	&__audit-title {}
-	&__audit-descr {}
+	&__list-title {
+		margin-bottom: 30px;
+	}
+	&__list {
+		font-family: 'Montserrat';
+		font-weight: 300;
+		max-width: 264px;
+		min-width: 230px;
+	}
+	&__list-twocolumn{
+		display: grid;
+		grid-template-columns: repeat(2, 264px);
+		max-width: 656px;
+		grid-column-gap: 5vw;
+	}
+	&__list-item {
+		position: relative;
+
+		padding-left: 30px;
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+
+		&::before{
+
+			content: '';
+			position: absolute;
+			top: 6px;
+			left: 0;
+
+			width: 20px;
+			height: 1px;
+
+			background: linear-gradient(90deg, #FCB045 100%, #FD1D1D 100%);
+		}
+	}
+	&__audit {
+		margin-top: 5vh;
+	}
+	&__audit-subtitle {
+		display: block;
+	}
+	&__audit-item {
+		flex: 0 1 294px;
+
+		&:not(:last-child){
+			margin-right: 14px;
+		}
+	}
+	&__audit-icon {
+		margin-bottom: 20px;
+	}
+	&__audit-title {
+		font-weight: 400;
+
+		margin-bottom: 20px;
+	}
+	&__audit-descr {
+		font-family: 'Montserrat';
+		font-weight: 300;
+	}
 	
 	.yellow-ball-center {
+		position: absolute;
+		top: 50vh;
+		right: 18%;
 	}
 	.yellow-light {
+		position: absolute;
+		top: 10%;
+		right: -10%;
+	}
+
+	&__tabs-btn{
+		display: none;
+	}
+	.tabs__item{
+	  display: none;
+	}
+	.tabs__item._active{
+	  display: block;
 	}
 }
 

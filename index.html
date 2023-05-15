@@ -58,8 +58,8 @@
 					</div>
 				</div>
 			</header>
+
 			<div class="header__mobile-nav"></div>
-			<main id="main">
 			<div class="line-center line-gradient"></div>
 			<div class="lines-container">
 				<div class="line-gradient line-gradient--left"></div>
@@ -79,6 +79,8 @@
 					</svg>
 				</div>
 			</div>
+
+			<main id="main">
 				<section class="promo">
 					<div class="purple-ball"></div>
 					<div class="red-ball red-ball--big"></div>
@@ -201,13 +203,13 @@
 							<p class="solving__header-subtitle subtitle">
 								<span class="_text-decor_two">99% компаний откладывают внедрение AmoCRM</span> или не доводят систему до результата
 							</p>
-							<p class="solving__header-descr">Всё это приводит к самой главной проблеме — потере денег.</p>
+							<p class="solving__header-descr _title-content">Всё это приводит к самой главной проблеме — потере денег.</p>
 						</div>
 						<div class="solving__inner">
 							<div class="solving__list-wrapper">
-								<span class="solving__list-title">Компания работает без AmoCRM</span>
+								<span class="solving__list-title _title-content" data-da=".solving__tabs-btn--noamo, 800, 0">Компания работает без AmoCRM</span>
 
-								<ul class="solving__list">
+								<ul class="solving__list" data-da=".solving__tabs-item--noamo, 800, 0">
 									<li class="solving__list-item">Нет времени  на самостоятельное изучение и внедрение CRM системы.</li>
 									<li class="solving__list-item">Отсутствие понимания для чего надо внедрять CRM систему. Какую пользу это принесёт бизнесу.</li>
 									<li class="solving__list-item">Страх, что вложенные средства не окупятся.</li>
@@ -215,16 +217,37 @@
 							</div>
 
 							<div class="solving__list-wrapper">
-								<span class="solving__list-title">AmoCRM не даёт результата</span>
+								<span class="solving__list-title _title-content" data-da=".solving__tabs-btn--noresult, 800, 0">AmoCRM не даёт результата</span>
 
-								<ul class="solving__list">
+								<ul class="solving__list solving__list-twocolumn" data-da=".solving__tabs-item--noresult, 800, 0">
 									<li class="solving__list-item">Работа отдела продаж не является системной. Отдел является чёрным ящиком, работу которого нельзя спрогнозировать.</li>
 									<li class="solving__list-item">Невозможно определить, какие сделки являются самыми прибыльными для компании, а какие не приносят результата.</li>
 									<li class="solving__list-item">Информация о клиентах хранится лично у менеджеров, что тормозит проект, если сотрудник не на месте. Также это даёт возможность увести клиентов из компании.</li>
 									<li class="solving__list-item">Сложно оценить эффективность работы отдельного сотрудника.</li>
 								</ul>
 							</div>
+
 						</div>
+							<div class="solving__tabs tabs">
+								<nav class="solving__tabs-nav tabs__nav">
+
+									<button class="solving__tabs-btn solving__tabs-btn--noamo tabs__nav-btn _active" type="button" data-tab='#tab-1'>
+									</button>
+
+									<button class="solving__tabs-btn solving__tabs-btn--noresult tabs__nav-btn " type="button" data-tab='#tab-2'>
+									</button>
+
+								</nav>
+								<div class="solving__tabs-content tabs__content">
+									<div class="solving__tabs-item--noamo tabs__item _active" id="tab-1">
+										
+									</div>
+
+									<div class="solving__tabs-item--noresult tabs__item" id="tab-2">
+										
+									</div>
+								</div>
+							</div>
 
 						<div class="solving__audit">
 							<span class="solving__audit-subtitle subtitle">
@@ -234,17 +257,17 @@
 							<div class="solving__inner">
 								<div class="solving__audit-item">
 									<img class="solving__audit-icon" src="images/icons/solving-icon1.svg" alt="Контентное изображение">
-									<span class="solving__audit-title">Продумаем функционал</span>
+									<span class="solving__audit-title _title-content">Продумаем функционал</span>
 									<p class="solving__audit-descr">Составим ТЗ с продуманным функционалом, что сократит ваш бюджет в будущем.</p>
 								</div>
 								<div class="solving__audit-item">
 									<img class="solving__audit-icon" src="images/icons/solving-icon2.svg" alt="Контентное изображение">
-									<span class="solving__audit-title">Обучим до результата</span>
+									<span class="solving__audit-title _title-content">Обучим до результата</span>
 									<p class="solving__audit-descr">Составим подробную инструкцию по работе с решениями. Обучим одного из ваших сотрудников.</p>
 								</div>
 								<div class="solving__audit-item">
 									<img class="solving__audit-icon" src="images/icons/solving-icon3.svg" alt="Контентное изображение">
-									<span class="solving__audit-title">Настроим продажи на максимум</span>
+									<span class="solving__audit-title _title-content">Настроим продажи на максимум</span>
 									<p class="solving__audit-descr">Сделаем работу отдела системной и легко прогнозируемой, а сотрудников эффективными.</p>
 								</div>
 							</div>
